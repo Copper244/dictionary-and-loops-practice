@@ -42,12 +42,18 @@
 import student_data
 
 # print(student_data.students)
-students = student_data.students
-print(len(students))
+students = student_data.students #this line
+#imports the data from the student_data.py file
+print(len(students)) #length of the list
 print(students[0]['Combo,Name'])
 print(students[0]['Email'][0])
 print(students[0]['Email'][1])
+print(students[0]['LName'][0])
+print(students[0]['HR'][0])
 
+print(students[2]['Combo,Name'])
+print(students[2]['Email'][0])
+print(students[2]['Email'][1])
 # What is being counted?
 
 # If the output is 36, what does that tell you?
@@ -68,11 +74,22 @@ print(students[0]['Email'][1])
 #and printing the name and email of the students
 #we are also printing a line of underscores to separate the students
 #we are also printing a line of underscores to separate the students
-for student in students:
-    print(student['Combo,Name'])
-    print(student['Email'][0])
-    print(student['Email'][1])
-    print("_"*25)
+#for student in students:
+    #print(student['Email'][0])
+    #print(student['Email'][1])
+    #print(student['GL'])
+    #print(student['HR'])
+    #print(student['CPSID'])
+
+    #print(student['LunchStatus'])
+    #student.update({'LunchStatus': 'Reduced'})
+    #print(student['LunchStatus'])
+    #if the student grade level is greater
+    #than or at leaast lunch
+    #give them off campus lunch
+    #if student['Gl'] >= 10:
+    #    print("off campus lunch")
+    #print("_"*25)
 
 # What does the loop variable student represent on each pass?
 
@@ -94,6 +111,11 @@ for student in students:
         print(student['Combo,Name'])
         print("this works")
 
+name = input("what is you ID?") 
+for student in students:
+    if name == student['CPSID']:
+        print(student['CPSID'])
+        print("this works")
 # What is the goal of this search?
 
 # What happens if the name is not found?
